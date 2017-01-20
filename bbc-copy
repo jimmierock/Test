@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+
+
+	<link rel = "icon" href = "http://newsimg.bbc.co.uk/favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+
+	<style type = "text/css">
+
+		a {
+			text-decoration: none;
+			color: #2d2d2d;
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+			font-family: 'Overpass', sans-serif;
+			overflow-y: scroll; overflow-x:hidden;
+			
+		}
+
+		#top-bar{
+			background-color: white;
+			height: 50px;
+			border-bottom-color: grey;
+			border-width: 1px;
+			border-bottom-style: solid;
+			margin: 0px;
+			padding: 0px;
+			width: 2000px
+
+		}
+
+		#bbc{
+			font-size: 150%;
+			background-color: black;
+			color: white;
+			position: relative;
+			top: 10px;
+			left: 400px;
+		}
+
+		.letters {
+			float: left;
+			margin: 2px;
+			padding: 2px;
+			width: 25px;
+			height: 25px;
+			background-color: black;
+			text-align: center;	
+		}
+
+
+		.vertical-line {
+
+			float: left;
+			color: grey;
+			position: relative;
+			left: 410px;
+			top: -40px;
+
+
+		}
+
+		#sign-in {
+			font-size: 120%;
+			color: grey;
+			float: left;
+			position: relative;
+			left: 410px;
+			background-color: white;
+			width: 130px;
+			height: 49px;
+			border-left: 1px solid grey;
+			border-right: 1px solid grey;
+	
+		}
+
+		#picture-shift{
+			position: relative;
+			top: 10px;
+			left:10px;
+		}
+
+
+		#icon-shift{
+			position: relative;
+			left: 16px;
+
+		}
+
+		#sign-in:hover::after{
+		    content:"";
+   	 		position:absolute;
+		    left:0%;
+		    right:0%;
+		    bottom:0;
+
+		    border:1.5px solid red;
+		    width = 110%;
+		}
+
+		#news-wrapper {
+			font-size: 120%;
+			position: relative;
+			left: 424px;
+			top: 0px;
+			width: 289px;
+			height: 49px;
+			border-right: 1px solid grey;
+		}
+
+		#news-wrapper:hover::after{
+		    content:"";
+   	 		position:absolute;
+		    left:0%;
+		    right:0%;
+		    bottom:0;
+
+		    width: 70px;
+		    left: 215.4px;
+	
+		    border:3px solid red;
+		    width = 110%;			
+		}
+
+		#news {
+			position: relative;
+			top: 13px;
+
+		}
+
+		#sport-wrapper {
+			font-size: 120%;
+			position: relative;
+			left: 725px;
+			top: -49px;
+			width: 62px;
+			height: 50px;
+			border-right: 1px solid grey;
+		}
+
+		#sport {
+			position: relative;
+			top: 13px;
+		}
+
+		#sport-wrapper:hover::after{
+		    content:"";
+   	 		position:absolute;
+		    left:0%;
+		    right:0%;
+		    bottom:0;
+
+		    width: 70px;
+		    left: -12px;
+	
+		    border:3px solid orange;
+		    width = 110%;			
+		}	
+
+
+		#more-wrapper {
+			font-size: 120%;
+			position: relative;
+			left: 1300px;
+			width: 2500px;
+			top: -38px;
+
+
+		}
+
+		#small-more:hover::after {
+			content:"";
+   	 		position:absolute;
+		    left:0%;
+		    right:0%;
+		    top:32px;
+		    left:-1400px;
+		    width: 70px;
+		    left: -12px;
+	
+		    border:3px solid black;
+		    width = 110%;
+
+		}
+
+		
+
+		#more {
+			position: absolute;
+			left:220px;
+			top: 280px;
+			width: 100%;
+			
+			background-color: white;
+		}
+
+
+
+		#big-more{
+			font-size: 200%;
+			position: absolute;
+			top:-200px;
+			left: 480px;
+		}
+
+		#column-1{
+			position: absolute;
+			top:-200px;
+			left: 650px;
+		}
+
+		#column-2{
+			position: absolute;
+			top: -200px;
+			left: 800px;
+		}
+
+		#column-3{
+			position: absolute;
+			top: -200px;
+			left: 950px;
+		}
+
+		#column-4{
+			position: absolute;
+			top: -200px;
+			left: 1100px;
+		}		
+
+		#column-5{
+			position: absolute;
+			top: -200px;
+			left: 1250px;
+		}
+
+		#panel {
+			display: none;
+			background-color: white;
+		}	
+
+
+		#search-wrapper{
+			position: absolute;
+			left: 1400px;
+			top: 0px;
+			height: 52px;
+			border-left: 1px solid grey;
+		}
+
+		#search-box{
+			position: absolute;
+			left: 20px;
+			top: 14px;
+			height: 20px;
+		}
+
+		#search-shift{
+			position: absolute;
+			left: 190px;
+			top:10px;
+		}
+
+
+		#welcome{
+			position: relative;
+			left: 420px;
+			top: -20px;
+		}
+
+		#welcome-1{
+			font-size: 250%;
+
+		}
+
+		#welcome-2{
+			font-size: 150%
+			font-color: grey;
+			position: relative;
+			top: -20px;
+
+		}
+
+		#background{
+			background-color: #DCDADA;
+			width: 2000px;
+			position: relative;
+			top:40px;
+			height: 2000px;
+
+		}
+
+		#big-picture-wrapper {
+			position: absolute;
+			top: 20px;
+			left: 650px;
+			height: 400px;
+			width: 400px;
+			background-color: white;
+		}
+
+		.sub-category{
+			font-size:90%;
+			color: grey;
+			margin-left:30px;
+		}
+
+		#medium-picture-wrapper{
+			position: absolute;
+			top: 20px;
+			left: 1100px;
+			background-color: white;
+			height: 400px;
+			width: 220px;
+		}
+
+		.big-text{
+			font-size: 120%;
+			margin: 30px;
+			margin-top: 5px;
+			margin-bottom:0px;
+			font-weight: bold;
+		}
+
+		#box-1{
+			position: absolute;
+			background-color: white;
+			left: 650px;
+			width: 400px;
+			height: 110px;
+			top: 500px;
+		}
+
+		#headlines{
+			position: absolute;
+			left: 650px;
+			top: 445px;
+			font-size: 120%;
+		}
+
+	</style>
+
+
+
+	<title> BBC - Home </title>
+
+
+	</head>
+
+
+
+
+	<body>
+
+		<div id = "top-bar">
+
+			<div id = "bbc"> 
+
+					<div class = "letters"> B </div>
+					<div class = "letters"> B </div>
+					<div class = "letters"> C </div>
+
+			</div>
+
+				<!--
+				<div class = "vertical-line">
+					<hr width="1" size="82">			
+				</div>
+				
+				Bordering instead of horizontal line
+				-->
+			
+			<div id = "sign-in">
+
+				<span id = "picture-shift"> <img src = "http://www.freeiconspng.com/uploads/head-icon-png-5.png" width = "30" height = "30"> </span>
+
+			<span id = "icon-shift"> <a href = "https://www.google.com"> Sign in </a> </span>
+
+			</div>
+
+			<div id ="news-wrapper">
+				<span id = "news"> <a href = "http://www.google.com"> News </a> </span>
+			</div>
+
+			<div id = "sport-wrapper">
+				<span id = "sport"> <a href= "http://www.google.com"> Sport </a> </span>
+			</div>
+
+			
+
+
+			<p id = "test">Test</p>
+			<div id = "search-wrapper">
+				<form>
+					<input type ="text" id="search-box" placeholder= "Search">
+					<span id = "search-shift"><img src ="http://www.free-icons-download.net/images/search-button-icon-57099.png" width =30px height=30px></span>
+				</form>
+			</div>	
+		</div>
+
+		<div id = "more-wrapper">
+		   	<a href="javascript:showhide('more')">
+		   	<span id = "small-more"> More </span>
+		   	</a>
+		</div>
+
+
+		   	<div id="more" style="display:none;">
+	    		<div id = "big-more">
+	    			<p> MORE </p>
+	    		</div>
+
+	    		<div id = "column-1">	
+	    			<p>Capital</p>
+	    			<p>Radio </p>
+	    			<p>Bitesize</p>
+	    			<p>Nature</p>
+	    		</div>
+
+	    		<div id ="column-2">
+	    			<p> Culture </p>
+	    			<p> CBBC </p>
+	    			<p> Music </p>
+	    			<p> Local </p>
+
+	    		</div>
+
+	    		<div id = "column-3">
+	    			<p> Autos </p>
+	    			<p> CBeebies </p>
+	    			<p> Arts </p>
+	    		</div>
+
+	    		<div id = "column-4">
+	    			<p> Future </p>
+	    			<p> Food </p>
+	    			<p> Make it Digital </p>
+
+	    		</div>
+		    				
+	    		<div id = "column-5">
+	    			<p> TV </p>
+	    			<p> iWonder </p>
+	    			<p> Taster </p>
+	    		</div>	
+			</div>
+
+		<div id = "welcome"> 
+			<p id = "welcome-1"> Welcome </p>
+			<p id = "welcome-2"> Thursday, 19 January </p>
+		</div>
+	
+
+	<div id = "background">
+		<div id ="big-picture-wrapper">
+			<img src = "http://londontopia.net/wp-content/uploads/2015/09/a43792be25e33138c120cbf7a74be9d93b0d0edf.jpg" width = 400px height = 300px>
+
+			<p class = big-text>
+			British Government 200 Year Anniversary</p>
+			<p class = sub-category> Gov </p>
+		</div>
+
+		<div id = "medium-picture-wrapper">
+			<img src = "http://www.abc.net.au/news/image/8199250-3x2-700x467.jpg"
+			width = 220px height = 130px>
+			<p class = big-text > 
+			Six found dead in hotel snow avalanche </p>
+			<br><br><br><br><br><br><br>
+			
+			<p class = sub-category> Italy </p>
+		</div>
+
+		<div id = "medium-picture-wrapper" div style = "left: 1350px;">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"
+			width = 220px height = 130px>
+			<p class = big-text > 
+			Police taser race group founder in face 'by mistake' </p>
+			<br><br><br><br><br><br><br>
+			
+			<p class = sub-category> England </p>
+		</div>
+
+		<p id = "headlines"> News headlines </p>
+
+		<div id = "box-1">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+		<div id = "box-1" div style = "position:relative; top:620px;">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+		<div id = "box-1" div style = "position:relative; top:630px;">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+
+
+		<p id = "headlines" p style ="position: relative; top: 225px; left:1150px"> Sport headlines </p>
+
+		<div id = "box-1" div style = "position: relative; top: 215px; left:1150px" >
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+		<div id = "box-1" div style = "position: relative; top: 225px; left:1150px">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+		<div id = "box-1" div style = "position: relative; top: 235px; left:1150px">
+			<img src = "http://cdn.countercurrentnews.com/wp-content/uploads/2014/09/Police-Taser-Suspect.jpg"width = 200px height = 110px>
+			<p class = big-text p style = "position: relative; top: -110px; left: 190px">
+			Mistake tasering </p>
+			<p class = sub-categry p style = "position: relative; top: -100px; left: 220px"> England </p>
+		</div>
+
+	</div>
+
+
+			
+
+
+	<script>
+     function showhide(id) {
+       	var e = document.getElementById(id);
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+     }
+
+	</script>	
+
+	</body>
+
+</html>
